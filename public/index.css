@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+  --primary-blue: #2950a3;
+  --secondary-orange: #f68527;
+  --whatsapp-green: #49c858;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  -webkit-transform: translate3d(0);
+  -webkit-backface-visibility: hidden;
+  -moz-transform: translate3d(0);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  background-image: url("/public/hero-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  padding: 0 10rem;
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav-bar {
+}
+
+.nav-bar-flex {
+  display: flex;
+  padding: 2rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar-flex a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: -0.055rem;
+}
+
+.search-box {
+  display: inline-block;
+  margin-left: 10rem;
+}
+
+.search-box p {
+  letter-spacing: -0.055rem;
+  line-height: 114.5%;
+}
+
+.Search {
+  color: white;
+  font-weight: 400;
+  margin-left: 0.5rem;
+  display: inline;
+}
+
+.magnifying-glass {
+  /* display: inline-block; */
+  font-size: 1.5rem;
+  transform: rotate(-35deg);
+}
+
+.text {
+  margin-top: 8rem;
+}
+
+.text h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.055rem;
+  line-height: 114.5%;
+  margin: 1rem 0;
+}
+
+.text p {
+  color: white;
+  font-weight: 400;
+  font-size: 1.125rem;
+  letter-spacing: -0.055rem;
+  line-height: 163.5%;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.contact-button {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: -0.055rem;
+  line-height: 163.5%;
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 5px;
+  padding: 0.375rem 2rem;
+}
+
+.whatsapp-button {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: -0.055rem;
+  line-height: 163.5%;
+  background-color: var(--whatsapp-green);
+  border: none;
+  border-radius: 5px;
+  padding: 0.375rem 2rem;
+  margin-left: 0.625rem;
+}
