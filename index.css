@@ -139,6 +139,8 @@ body {
 }
 
 .contact-button {
+  display: inline-block;
+  text-decoration: none;
   color: white;
   font-size: 1.125rem;
   font-weight: 400;
@@ -152,6 +154,8 @@ body {
 }
 
 .whatsapp-button {
+  display: inline-block;
+  text-decoration: none;
   color: white;
   font-size: 1.125rem;
   font-weight: 400;
