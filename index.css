@@ -479,6 +479,8 @@ body {
 }
 
 .blue-button {
+  display: inline-block;
+  text-decoration: none;
   color: white;
   font-size: 1.125rem;
   font-weight: 400;
@@ -492,6 +494,8 @@ body {
 }
 
 .inverted-blue-button {
+  display: inline-block;
+  text-decoration: none;
   color: var(--primary-blue);
   font-size: 1.125rem;
   font-weight: 400;
@@ -864,7 +868,7 @@ footer h4 {
   }
   /* RESPONSIVE Section 4 end */
 
-  /* Section 5 Reach Card start */
+  /* RESPONSIVE Section 5 Reach Card start */
   .reach-card-container {
     display: flex;
     align-items: center;
@@ -912,9 +916,9 @@ footer h4 {
     margin: 0;
     padding: 0;
   }
-  /* Section 5 Reach Card end */
+  /* RESPONSIVE Section 5 Reach Card end */
 
-  /* Section 6 */
+  /* RESPONSIVE Section 6 */
   .section-6 {
     margin: 5rem 0;
   }
@@ -983,6 +987,8 @@ footer h4 {
   }
 
   .blue-button {
+    display: inline-block;
+    text-decoration: none;
     color: white;
     font-size: 1.5rem;
     font-weight: 300;
@@ -995,6 +1001,8 @@ footer h4 {
   }
 
   .inverted-blue-button {
+    display: inline-block;
+    text-decoration: none;
     color: var(--primary-blue);
     font-size: 1.5rem;
     font-weight: 300;
@@ -1005,5 +1013,5 @@ footer h4 {
     border-radius: 5px;
     padding: 0.5rem 2rem;
   }
-  /* Section 6 */
+  /* RESPONSIVE Section 6 */
 }
