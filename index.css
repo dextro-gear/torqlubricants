@@ -654,7 +654,7 @@ footer h4 {
     color: white;
     font-size: 4rem;
     font-weight: 600;
-    letter-spacing: -0.3rem;
+    letter-spacing: -0.05em;
     line-height: 114.5%;
     margin: 1rem 0;
   }
@@ -663,7 +663,7 @@ footer h4 {
     color: white;
     font-weight: 300;
     font-size: 1.5rem;
-    letter-spacing: -0.03rem;
+    letter-spacing: -0.05rem;
     line-height: 163.5%;
     margin: 1.5rem 0 2.5rem 0;
   }
