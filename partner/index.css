@@ -8,6 +8,15 @@
   --large-padding: 21rem;
 }
 
+::-webkit-scrollbar {
+  background-color: #eeeeee;
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-blue);
+}
+
 * {
   -webkit-font-smoothing: antialiased;
 }

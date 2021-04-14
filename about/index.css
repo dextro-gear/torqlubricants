@@ -18,13 +18,8 @@
   width: 0.75rem;
 }
 
-::-webkit-scrollbar-track {
-  /* border-left: 1px solid var(--primary-blue); */
-}
-
 ::-webkit-scrollbar-thumb {
   background-color: white;
-  /* border-left: 1px solid var(--primary-blue); */
 }
 
 * {
