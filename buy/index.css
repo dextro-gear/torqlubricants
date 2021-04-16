@@ -380,12 +380,21 @@ textarea:active {
 
 /* Quote section start */
 .quote .title {
+  position: relative;
   font-variation-settings: "wght" 400;
   line-height: 163.5%;
 }
 
 .quote {
+  position: relative;
   padding: 3rem var(--medium-padding);
+}
+
+.quote img {
+  position: absolute;
+  top: 0;
+  right: var(--medium-padding);
+  opacity: 0.1;
 }
 /* Quote section end */
 
