@@ -15,25 +15,182 @@
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <!-- Hero section starts-->
     <section class="hero">
-      <div class="nav-bar">
-        <div class="nav-bar-flex">
+      <nav class="nav-bar">
+        <ul class="nav-bar-flex">
           <div class="nav-logo">
             <a href="/">
               <img src="/public/logo.png" alt="TORQ" />
             </a>
           </div>
-          <a href="/">Home</a>
-          <a href="/about">Company</a>
-          <a href="#">Products &#x25BE;</a>
-          <a href="#">Industries &#x25BE;</a>
-          <a href="/work">Careers</a>
-          <a href="#">Contact Us &#x25BE;</a>
+          <li class="nav-link">
+            <a href="/">Home</a>
+          </li>
+          <li class="nav-link">
+            <a href="/about">Company</a>
+          </li>
+          <li class="has-dropdown nav-link">
+            <span>Products &#x25BE;</span>
+            <div class="dropdown-container">
+              <div class="dropdown-flex width-80">
+                <ul class="dropdown-unit">
+                  <p class="dropdown-title">GREASES</p>
+                  <li class="dropdown-links">
+                    <a href="#">High Speed Grease</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Water-Resistant Grease</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Heavy Load & EP Grease</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">High Temperature Grease</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Multi-purpose High Performance</a>
+                  </li>
+                </ul>
+                <ul class="dropdown-unit">
+                  <p class="dropdown-title">OILS</p>
+                  <li class="dropdown-links">
+                    <a href="#">Synthetic Gear Oils</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Food Grade Oils</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Silicone Oils</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Chain Oils</a>
+                  </li>
+                </ul>
+                <ul class="dropdown-unit">
+                  <p class="dropdown-title">SPECIALITIES</p>
+                  <li class="dropdown-links">
+                    <a href="#">Wire Rope Compound</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Open Gear Grease</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Silicone Grease</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Fluid Grease</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Food Grade Grease</a>
+                  </li>
+                </ul>
+                <ul class="dropdown-unit">
+                  <p class="dropdown-title">PASTES</p>
+                  <li class="dropdown-links">
+                    <a href="#">Anti-Seize Copper Paste</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Anti-Seize Nickel Paste</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Anti-Seize Moly Paste</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Chuck Jaw Paste</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Chisel Paste</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="has-dropdown nav-link">
+            <span>Industries &#x25BE;</span>
+            <div class="dropdown-container" id="industries-dropdown-container">
+              <div class="dropdown-flex width-65" id="industries-dropdown-flex">
+                <ul class="dropdown-unit" id="industries-dropdown-unit">
+                  <li class="dropdown-links">
+                    <a href="#">Iron and Steel</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Wind Power</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Plastic</a>
+                  </li>
+                </ul>
+                <ul class="dropdown-unit" id="industries-dropdown-unit">
+                  <li class="dropdown-links">
+                    <a href="#">Infrastructure</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Paper</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Pharma and Food</a>
+                  </li>
+                </ul>
+                <ul class="dropdown-unit" id="industries-dropdown-unit">
+                  <li class="dropdown-links">
+                    <a href="#">General Electronics</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Cement</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Mining</a>
+                  </li>
+                </ul>
+                <ul class="dropdown-unit" id="industries-dropdown-unit">
+                  <li class="dropdown-links">
+                    <a href="#">Automobile</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Power</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Marine</a>
+                  </li>
+                </ul>
+                <ul class="dropdown-unit" id="industries-dropdown-unit">
+                  <li class="dropdown-links">
+                    <a href="#">Chemicals</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Sugar</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="#">Minerals</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-link">
+            <a href="/work">Careers</a>
+          </li>
+          <li class="has-dropdown nav-link">
+            <span>Contact Us &#x25BE;</span>
+            <div class="dropdown-container" id="contact-dropdown-container">
+              <div class="dropdown-flex width-20" id="contact-dropdown-flex">
+                <ul class="dropdown-unit" id="contact-dropdown-unit">
+                  <li class="dropdown-links">
+                    <a href="/buy">Buy from us</a>
+                  </li>
+                  <li class="dropdown-links">
+                    <a href="/partner">Partner with us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
           <div class="search-box">
             <img src="/public/mag-glass.png" alt="mg" />
             <p class="Search">Search</p>
           </div>
-        </div>
-      </div>
+        </ul>
+      </nav>
       <div class="text">
         <h1>Your Technical Partner in<br />Speciality Lubricants</h1>
         <p>
@@ -45,10 +202,18 @@
       <a href="#" class="whatsapp-button">
         <i class="fab fa-whatsapp"></i>Text on WhatsApp
       </a>
+      <a href="#trusted">
+        <span
+          class="iconify down-arrow"
+          data-icon="akar-icons:arrow-down"
+          data-inline="false"
+        ></span>
+      </a>
     </section>
     <!-- Hero section ends -->
-    <!-- Section 2 - Trusted Clients and Grid start -->
-    <section class="section-2">
+
+    <!-- Trusted Partners start -->
+    <section class="trusted-partners" id="trusted">
       <p class="trusted-title">TRUSTED BY THE BEST IN THE INDUSTRY</p>
       <div class="trusted-companies">
         <img src="/public/jindal.png" alt="jindal" />
@@ -58,7 +223,11 @@
         <img src="/public/tata.png" alt="tata" />
         <img src="/public/hil.png" alt="hil" />
       </div>
+    </section>
+    <!-- Trusted Partners end -->
 
+    <!-- Section 2 - Trusted Clients and Grid start -->
+    <section class="section-2">
       <div class="grid-container">
         <div class="technical-partner-grid">
           <div class="technical-partner-text">
@@ -80,6 +249,13 @@
                 <p class="checklist-text">
                   State of the art manufacturing facility, laboratory with
                   research & development centre
+                </p>
+              </div>
+              <div class="checklist-unit">
+                <i class="far fa-check-circle"></i>
+                <p class="checklist-text">
+                  Presence all over the country through a network of
+                  distributors & warehouses
                 </p>
               </div>
               <div class="checklist-unit">
@@ -107,13 +283,6 @@
                   Customised solutions for your application
                 </p>
               </div>
-              <div class="checklist-unit">
-                <i class="far fa-check-circle"></i>
-                <p class="checklist-text">
-                  Presence all over the country through a network of
-                  distributors & warehouses
-                </p>
-              </div>
             </div>
             <button class="contact-button">Know more</button>
           </div>
@@ -124,61 +293,129 @@
       </div>
     </section>
     <!-- Section 2 - Trusted Clients and Grid end-->
-    <!-- Section 3 - Reasons start -->
-    <!-- <section class="reasons">
-      <h1 class="blue-title left-padding">Reasons our clients choose us</h1>
-      <div class="reasons-carousel"></div>
-      <div class="reasons-text">
-        <h1>Technology that works</h1>
-        <p>
-          Our state of the art manufacturing facility, R&D Centre and lab at
-          Hyderabad, India is capable of developing and producing the most
-          advanced technology lubrication oils & greases.
+
+    <!-- Industries grid start -->
+    <section class="industries">
+      <div class="title-block">
+        <p class="small-caps-title">INDUSTRIES WE SERVE</p>
+        <p class="blue-title">
+          Tailor-made Oils, Greases and Pastes for your Industry
         </p>
       </div>
-    </section> -->
-    <!-- Section 3 - Reasons end -->
+      <div class="industries-grid">
+        <a href="#" class="grid-unit" id="img1">
+          <div class="grid-img-text">
+            <p>Iron and Steel</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img2">
+          <div class="grid-img-text">
+            <p>Wind Power</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img3">
+          <div class="grid-img-text">
+            <p>Plastic</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img4">
+          <div class="grid-img-text">
+            <p>Infrastructure</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img5">
+          <div class="grid-img-text">
+            <p>Paper</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img6">
+          <div class="grid-img-text">
+            <p>Pharma and Food</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img7">
+          <div class="grid-img-text">
+            <p>General Electronics</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img8">
+          <div class="grid-img-text">
+            <p>Cement</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img9">
+          <div class="grid-img-text">
+            <p>Mining</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img10">
+          <div class="grid-img-text">
+            <p>Automobile</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img11">
+          <div class="grid-img-text">
+            <p>Power</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img12">
+          <div class="grid-img-text">
+            <p>Marine</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img13">
+          <div class="grid-img-text">
+            <p>Chemicals</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img14">
+          <div class="grid-img-text">
+            <p>Sugar</p>
+          </div>
+        </a>
+        <a href="#" class="grid-unit" id="img15">
+          <div class="grid-img-text">
+            <p>Minerals</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Industries grid end -->
+
     <!-- Section 4 start -->
     <section class="section-4">
-      <div class="image-text">
-        <div class="flex-wrapper-left-align">
-          <div class="image-container">
-            <img src="http://placekitten.com/500" alt="kitty" />
-          </div>
+      <div class="flex-wrapper">
+        <div class="image-container">
+          <img src="/public/technical-support.png" alt="tech-support" />
         </div>
-        <div class="flex-wrapper">
-          <div class="text-container">
-            <p class="blue-title">Technical Support</p>
-            <p class="desc">
-              Tribo Industries excels in technical support & fair guidance for
-              our customers. We have developed industry leading SOP’s to
-              understand clients applications and then on the basis of the
-              application requirement, working environment, human constraints
-              and several other factors and our scientific analysis we offer the
-              most suitable products.
-            </p>
-            <button class="contact-button">Contact us</button>
-          </div>
+        <div class="text-container">
+          <p class="blue-title">Technical Support</p>
+          <p class="desc">
+            Tribo Industries excels in technical support & fair guidance for our
+            customers. We have developed industry leading SOP’s to understand
+            clients applications and then on the basis of the application
+            requirement, working environment, human constraints and several
+            other factors and our scientific analysis we offer the most suitable
+            products.
+          </p>
+          <button class="contact-button">Contact us</button>
         </div>
-        <div class="flex-wrapper">
-          <div class="text-container">
-            <p class="blue-title">Exports & International Business</p>
-            <p class="desc">
-              Tribo Industries has a presence in several countries around the
-              world with exports to South East Asia, West Asia and Africa. We
-              are continually adding new dealers and distributors for
-              unrepresented territories. We welcome you to get in touch with us
-              if you wish to join us as our authorised distributor for your
-              country. We extend complete technical & marketing support to all
-              our distributors.
-            </p>
-            <button class="contact-button" id="bg-orange">Contact us</button>
-          </div>
+      </div>
+      <div class="flex-wrapper">
+        <div class="text-container">
+          <p class="blue-title">Exports & International Business</p>
+          <p class="desc">
+            Tribo Industries has a presence in several countries around the
+            world with exports to South East Asia, West Asia and Africa. We are
+            continually adding new dealers and distributors for unrepresented
+            territories. We welcome you to get in touch with us if you wish to
+            join us as our authorised distributor for your country. We extend
+            complete technical & marketing support to all our distributors.
+          </p>
+          <button class="contact-button" id="bg-orange">Contact us</button>
         </div>
-        <div class="flex-wrapper-right-align">
-          <div class="image-container">
-            <img src="http://placekitten.com/400" alt="kitty" />
-          </div>
+        <div class="image-container">
+          <img src="/public/exports.png" alt="exports" />
         </div>
       </div>
     </section>
@@ -242,6 +479,86 @@
       </div>
     </section>
     <!-- Section 6 Customized solutions end -->
+
+    <!-- FAQ section start -->
+    <section class="FAQ-section">
+      <img src="/public/faq.svg" alt="faq" class="faq-icon" />
+      <p class="faq-title">Frequently asked questions</p>
+      <p class="faq-tagline">
+        Here's some quick questions and answers to help you get to know us
+        better
+      </p>
+
+      <div class="faq-accordion-container">
+        <div class="faq-accordion">
+          <div class="faq-accordion-item collapse">
+            <span class="faq-accordion-ques">
+              Sed arcu facilisi nibh euismod arcu leo semper sed gravida cras
+              risus tortor in dui convallis viverra?
+              <i class="fas fa-chevron-down rotate"></i>
+            </span>
+            <div class="faq-accordion-ans">
+              Lacus, eu tincidunt egestas morbi amet. Eu, proin quis sodales leo
+              elit nam non gravida sed. Netus neque ultricies<br />risus
+              scelerisque feugiat velit, malesuada sit imperdieto, amet.
+            </div>
+          </div>
+          <div class="faq-accordion-item collapse">
+            <span class="faq-accordion-ques">
+              Sed arcu facilisi nibh euismod arcu leo semper sed gravida cras
+              risus tortor in dui convallis viverra?
+              <i class="fas fa-chevron-down rotate"></i>
+            </span>
+            <div class="faq-accordion-ans">
+              Lacus, eu tincidunt egestas morbi amet. Eu, proin quis sodales leo
+              elit nam non gravida sed. Netus neque ultricies<br />risus
+              scelerisque feugiat velit, malesuada sit imperdieto, amet.
+            </div>
+          </div>
+          <div class="faq-accordion-item collapse">
+            <span class="faq-accordion-ques">
+              Sed arcu facilisi nibh euismod arcu leo semper sed gravida cras
+              risus tortor in dui convallis viverra?
+              <i class="fas fa-chevron-down rotate"></i>
+            </span>
+            <div class="faq-accordion-ans">
+              Lacus, eu tincidunt egestas morbi amet. Eu, proin quis sodales leo
+              elit nam non gravida sed. Netus neque ultricies<br />risus
+              scelerisque feugiat velit, malesuada sit imperdieto, amet.
+            </div>
+          </div>
+          <div class="faq-accordion-item collapse">
+            <span class="faq-accordion-ques">
+              Sed arcu facilisi nibh euismod arcu leo semper sed gravida cras
+              risus tortor in dui convallis viverra?
+              <i class="fas fa-chevron-down rotate"></i>
+            </span>
+            <div class="faq-accordion-ans">
+              Lacus, eu tincidunt egestas morbi amet. Eu, proin quis sodales leo
+              elit nam non gravida sed. Netus neque ultricies<br />risus
+              scelerisque feugiat velit, malesuada sit imperdieto, amet.<br />
+              Lacus, eu tincidunt egestas morbi amet. Eu, proin quis sodales leo
+              elit nam non gravida sed. Netus neque ultricies<br />risus
+              scelerisque feugiat velit, malesuada sit imperdieto, amet.
+            </div>
+          </div>
+          <div class="faq-accordion-item collapse">
+            <span class="faq-accordion-ques">
+              Sed arcu facilisi nibh euismod arcu leo semper sed gravida cras
+              risus tortor in dui convallis viverra?
+              <i class="fas fa-chevron-down rotate"></i>
+            </span>
+            <div class="faq-accordion-ans">
+              Lacus, eu tincidunt egestas morbi amet. Eu, proin quis sodales leo
+              elit nam non gravida sed. Netus neque ultricies<br />risus
+              scelerisque feugiat velit, malesuada sit imperdieto, amet.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ section end -->
+
     <!-- Footer start -->
     <footer>
       <div class="footer-flex">
@@ -280,5 +597,6 @@
       <div class="copyright">Copyright © 2020 Tribo – All Rights Reserved</div>
     </footer>
     <!-- Footer end -->
+    <script src="script.js"></script>
   </body>
 </html>
