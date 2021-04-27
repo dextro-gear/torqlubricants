@@ -17,12 +17,21 @@ console.log(lightNavbar);
 
 var options = {};
 
+var timeout;
+
 var observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
+      lightNavbar.classList.add("transition");
       lightNavbar.classList.remove("invisible");
-    } else {
+      timeout = setTimeout(() => {
+        lightNavbar.style.overflow = "visible";
+      }, 600);
+    }
+    if (entry.isIntersecting) {
+      clearTimeout(timeout);
       lightNavbar.classList.add("invisible");
+      lightNavbar.style.overflow = "hidden";
     }
   });
 }, options);

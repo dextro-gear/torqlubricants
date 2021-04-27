@@ -198,6 +198,8 @@ li {
 
 .dropdown-links > a {
   color: black;
+  display: inline-block;
+  width: 100%;
   text-decoration: none;
   letter-spacing: var(--letter-spacing-large);
 }
@@ -271,7 +273,6 @@ li {
   background-color: white;
   padding: 0 var(--small-padding);
   box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.05);
-  transition: max-height 600ms cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .blue-link,
@@ -281,12 +282,17 @@ li {
 }
 
 .invisible {
+  overflow: hidden;
   max-height: 0;
+}
+
+.transition {
+  transition: max-height 600ms cubic-bezier(0.76, 0, 0.24, 1);
 }
 /* Navbar-light styles */
 
 .text {
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
 
 .text h1 {
@@ -953,64 +959,11 @@ footer h4 {
 @media screen and (min-width: 1366px) {
   /* 1366 RESPONSIVE Hero starts */
   .hero {
-    position: relative;
-    background-image: url("/public/hero-bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
     padding: 0 var(--medium-padding);
-    height: 100vh;
-    width: 100vw;
   }
 
-  .nav-logo {
-    width: 10rem;
-    margin-right: 1rem;
-  }
-
-  .nav-logo img {
-    width: 100%;
-  }
-
-  .nav-bar-flex {
-    display: flex;
-    padding: 3rem 0;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-link {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    font-variation-settings: "wght" 400;
-    letter-spacing: -0.05em;
-    cursor: pointer;
-  }
-
-  .nav-link a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    font-variation-settings: "wght" 400;
-    letter-spacing: -0.05em;
-  }
-
-  .nav-link::after {
-    content: "";
-    display: block;
-    width: 100%;
-    border-bottom: 2px var(--secondary-orange) solid;
-    margin-top: 0.3rem;
-    transition: transform 300ms;
-    transform: scaleX(0);
-    transform-origin: center;
-  }
-
-  .nav-link:hover::after {
-    transform: scaleX(1);
+  .navbar-light {
+    padding: 0 var(--medium-padding);
   }
 
   /* 1366 RESPONSIVE Dropdown styles */
@@ -1021,7 +974,6 @@ footer h4 {
 
   li {
     list-style-type: none;
-    /* cursor: pointer; */
   }
 
   .has-dropdown {
@@ -1039,28 +991,15 @@ footer h4 {
   }
 
   .width-80 {
-    width: 80vw;
+    width: 85vw;
   }
 
   .width-65 {
-    width: 65vw;
+    width: 70vw;
   }
 
   .width-20 {
     width: 20vw;
-  }
-
-  .dropdown-flex {
-    display: flex;
-    justify-content: space-between;
-    /* height: 10rem; */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    box-sizing: border-box;
-    transform: translateX(-42%);
-    background-color: white;
-    padding: 1.5rem 2rem;
   }
 
   .dropdown-unit {
@@ -1113,90 +1052,8 @@ footer h4 {
   }
   /* 1366 RESPONSIVE Dropdown styles */
 
-  .search-box {
-    display: inline-block;
-    margin-left: 5rem;
-  }
-
-  .search-box p {
-    letter-spacing: -0.055rem;
-    line-height: 114.5%;
-  }
-
-  .Search {
-    color: white;
-    font-variation-settings: "wght" 400;
-    margin-left: 0.5rem;
-    display: inline;
-  }
-
-  .magnifying-glass {
-    font-size: 1.5rem;
-    transform: rotate(-35deg);
-  }
-
   .text {
     margin-top: 8rem;
-  }
-
-  .text h1 {
-    color: white;
-    font-size: 3rem;
-    font-variation-settings: "wght" 600;
-    font-style: normal;
-    letter-spacing: -0.2rem;
-    line-height: 114.5%;
-    margin: 1rem 0;
-  }
-
-  .text p {
-    color: white;
-    font-variation-settings: "wght" 300;
-    font-size: 1.125rem;
-    letter-spacing: -0.055rem;
-    line-height: 163.5%;
-    margin: 0.5rem 0 1.5rem 0;
-  }
-
-  .contact-button {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    font-size: 1.125rem;
-    font-variation-settings: "wght" 400;
-    letter-spacing: -0.055rem;
-    line-height: 163.5%;
-    background-color: var(--primary-blue);
-    border: none;
-    border-radius: 5px;
-    padding: 0.375rem 2rem;
-  }
-
-  .whatsapp-button {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    font-size: 1.125rem;
-    font-variation-settings: "wght" 400;
-    letter-spacing: -0.055rem;
-    line-height: 163.5%;
-    background-color: var(--whatsapp-green);
-    border: none;
-    border-radius: 5px;
-    padding: 0.375rem 2rem;
-    margin-left: 0.625rem;
-  }
-
-  .whatsapp-button i {
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-    line-height: 1rem;
-    transform: translateY(0.1rem);
-  }
-
-  .contact-button:focus,
-  .whatsapp-button:focus {
-    outline: none;
   }
 
   .down-arrow {
@@ -1709,50 +1566,20 @@ footer h4 {
     margin-right: 2rem;
   }
 
-  .nav-logo img {
-    width: 100%;
-  }
-
-  .nav-bar-flex {
-    display: flex;
-    padding: 3rem 0;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   .nav-link {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
     font-size: 1.2rem;
     font-variation-settings: "wght" 400;
-    letter-spacing: -0.05em;
-    cursor: pointer;
   }
 
   .nav-link a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
     font-size: 1.2rem;
     font-variation-settings: "wght" 400;
-    letter-spacing: -0.05em;
   }
 
-  .nav-link::after {
-    content: "";
-    display: block;
-    width: 100%;
-    border-bottom: 2px var(--secondary-orange) solid;
-    margin-top: 0.3rem;
-    transition: transform 300ms;
-    transform: scaleX(0);
-    transform-origin: center;
+  .navbar-light {
+    padding: 0 var(--large-padding);
   }
 
-  .nav-link:hover::after {
-    transform: scaleX(1);
-  }
   /* 1920 Dropdown styles */
   ul {
     margin: 0;
@@ -1868,7 +1695,6 @@ footer h4 {
   }
 
   .Search {
-    color: white;
     font-variation-settings: "wght" 400;
     font-size: 1.275rem;
     margin-left: 0.5rem;

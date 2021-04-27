@@ -192,17 +192,10 @@ li {
 
 .dropdown-links > a {
   color: black;
+  display: inline-block;
+  width: 100%;
   text-decoration: none;
   letter-spacing: var(--letter-spacing-large);
-}
-
-.dropdown-links > a::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .dropdown-links {

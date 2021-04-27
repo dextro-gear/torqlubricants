@@ -202,20 +202,9 @@ li {
 
 .dropdown-links > a {
   color: black;
-  text-decoration: none;
+  display: inline-block;
+  width: 100%;
   letter-spacing: var(--letter-spacing-large);
-}
-
-.dropdown-links > a::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.dropdown-links {
   padding: 1rem 1rem;
   border-left: 0px solid var(--secondary-orange);
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05);
@@ -284,7 +273,6 @@ li {
   background-color: white;
   padding: 0 var(--small-padding);
   box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.05);
-  transition: max-height 600ms cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .blue-link,
@@ -295,6 +283,10 @@ li {
 
 .visible {
   max-height: 30rem;
+}
+
+.transition {
+  transition: max-height 600ms cubic-bezier(0.76, 0, 0.24, 1);
 }
 /* Navbar-light styles */
 
@@ -333,7 +325,7 @@ li {
 .text-flex .desc {
   color: white;
   font-size: 0.8rem;
-  font-variation-settings: "wght" 350;
+  font-variation-settings: "wght" 400;
   letter-spacing: var(--letter-spacing-large);
   line-height: var(--line-height-large);
   width: 40%;
@@ -359,7 +351,7 @@ li {
 
 .checklist-unit p {
   font-size: 0.8rem;
-  font-variation-settings: "wght" 450;
+  font-variation-settings: "wght" 400;
   letter-spacing: var(--letter-spacing-large);
   line-height: var(--line-height-small);
   margin: 0;
@@ -710,12 +702,160 @@ footer h4 {
     padding: 0 var(--large-padding);
   }
 
+  .nav-logo {
+    width: 11rem;
+  }
+
   .nav-link {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .nav-link a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+  }
+
+  .nav-link span > i {
+    font-size: 0.9rem;
+    margin-left: 0.6rem;
+  }
+
+  .search-box .iconify {
+    font-size: 1.3rem;
+  }
+
+  .Search {
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+  }
+
+  .navbar-light {
+    padding: 0 var(--large-padding);
+  }
+
+  .down-arrow {
+    left: var(--large-padding);
+    bottom: 10rem;
+  }
+
+  .text {
+    margin-top: 10rem;
+  }
+
+  .title-container {
+    width: 70%;
+  }
+
+  .text h1 {
+    font-size: 4rem;
+    margin: 1rem 0;
+  }
+
+  .text-flex .desc {
+    font-size: 1.1rem;
+    width: 45%;
+  }
+
+  .checklist-unit p {
+    font-size: 1.1rem;
   }
   /* RESPONSIVE Hero section end*/
+
+  .qa {
+    padding: 0 var(--large-padding);
+  }
+
+  .qa-image {
+    width: 30rem;
+  }
+
+  .infrastructure {
+    padding: 0 var(--large-padding);
+  }
+
+  .qa-title,
+  .infra-title {
+    font-size: 2.5rem;
+  }
+
+  .infra-tagline {
+    font-size: 1.3rem;
+  }
+
+  .infra-icon {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .business-section,
+  .values-section {
+    padding: 0 var(--large-padding);
+  }
+
+  .unit-text .title {
+    font-size: 2.2rem;
+  }
+
+  .unit-text .desc {
+    font-size: 1.3rem;
+  }
+
+  .vision-flex {
+    margin: 0 calc(var(--large-padding) - 2rem);
+    padding: 4rem 6rem;
+  }
+
+  .vision-image {
+    width: 17rem;
+  }
+
+  .vision-text {
+    font-size: 1.8rem;
+  }
+
+  .values-title {
+    font-size: 2.5rem;
+  }
+
+  .values-image {
+    width: 7rem;
+  }
+
+  .values-unit-title {
+    font-size: 2rem;
+  }
+
+  .values-unit-desc {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    padding: 3rem var(--large-padding);
+  }
+
+  .footer-logo {
+    width: 15rem;
+  }
+
+  .footer-logo p {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+  }
+
+  .footer-address {
+    font-size: 1rem;
+  }
+
+  .footer-links a {
+    font-size: 1rem;
+  }
+
+  footer h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  .footer-contact p,
+  .copyright {
+    font-size: 1rem;
+  }
 }
