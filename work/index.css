@@ -56,6 +56,10 @@ body {
   padding: 0;
 }
 
+p {
+  margin: 0;
+}
+
 strong {
   font-variation-settings: "wght" 600;
 }
@@ -161,11 +165,11 @@ li {
 }
 
 .width-80 {
-  width: 80vw;
+  width: 85vw;
 }
 
 .width-65 {
-  width: 65vw;
+  width: 70vw;
 }
 
 .width-20 {
@@ -255,7 +259,6 @@ li {
   margin-left: 0.5rem;
   letter-spacing: -0.05em;
 }
-
 /* Navbar Light end */
 
 /* Hero section start */

@@ -157,11 +157,11 @@ li {
 }
 
 .width-80 {
-  width: 80vw;
+  width: 85vw;
 }
 
 .width-65 {
-  width: 65vw;
+  width: 70vw;
 }
 
 .width-20 {
@@ -188,21 +188,13 @@ li {
 
 .dropdown-links > a {
   color: black;
+  display: inline-block;
+  width: 100%;
   text-decoration: none;
   letter-spacing: var(--letter-spacing-large);
 }
 
-.dropdown-links > a::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
 .dropdown-links {
-  position: relative;
   padding: 1rem 1rem;
   border-left: 0px solid var(--secondary-orange);
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05);
@@ -256,7 +248,7 @@ li {
 .Search {
   color: var(--primary-blue);
   font-weight: 400;
-  margin-left: 0.5rem;
+  margin: 0 0 0 0.5rem;
   letter-spacing: -0.05em;
 }
 
