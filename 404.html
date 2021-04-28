@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Not Found</title>
+  </head>
+  <body>
+    <section>
+      <div>
+        <p class="link-size">404 - Not Found</p>
+        <p class="title">Oops...</p>
+        <p class="subtitle">The page you were looking for was not found.</p>
+        <div class="link-flex">
+          <a class="link-size" href="javascript:history.back()"
+            >Go back to the <span class="orange">previous page</span>.</a
+          >
+          <a class="link-size" href="/"
+            >Go to the <span class="orange">home page</span>.</a
+          >
+        </div>
+      </div>
+    </section>
+  </body>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+    :root {
+      --primary-blue: #2950a3;
+      --secondary-orange: #f68527;
+      --whatsapp-green: #49c858;
+      --small-padding: 10rem;
+      --medium-padding: 15rem;
+      --large-padding: 21rem;
+      --letter-spacing-large: -0.05em;
+      --letter-spacing-medium: -0.03em;
+      --line-height-small: 114.5%;
+      --line-height-medium: 145.5%;
+      --line-height-large: 163.5%;
+    }
+
+    ::-moz-selection {
+      background-color: var(--secondary-orange);
+      color: white;
+    }
+
+    ::selection {
+      background-color: var(--secondary-orange);
+      color: white;
+    }
+
+    ::-webkit-scrollbar {
+      background-color: black;
+      width: 0.5rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #eeeeee;
+      border-radius: 10px;
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      box-sizing: border-box;
+      font-family: Inter, sans-serif;
+      font-size: 16px;
+      overflow: hidden;
+      scroll-behavior: smooth;
+      -webkit-transform: translate3d(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -moz-transform: translate3d(0);
+      transform: translate3d(0);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      padding: 5rem var(--small-padding);
+      display: flex;
+      justify-content: stretch;
+      align-items: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    section > div {
+      width: 100%;
+    }
+
+    .link-size {
+      font-size: 2rem;
+      margin: 0;
+      color: var(--primary-blue);
+      font-variation-settings: "wght" 700;
+      letter-spacing: var(--letter-spacing-large);
+    }
+
+    .title {
+      font-size: 7.5rem;
+      margin: 0;
+      color: var(--primary-blue);
+      font-variation-settings: "wght" 700;
+      letter-spacing: var(--letter-spacing-large);
+    }
+
+    .subtitle {
+      font-size: 2.75rem;
+      margin: 0;
+      color: var(--primary-blue);
+      font-variation-settings: "wght" 700;
+      letter-spacing: var(--letter-spacing-large);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .link-flex {
+      margin: 3rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .orange {
+      color: var(--secondary-orange);
+    }
+
+    @media screen and (min-width: 1366px) {
+      section {
+        padding: 5rem var(--medium-padding);
+      }
+    }
+
+    @media screen and (min-width: 1440px) {
+      .subtitle {
+        font-size: 3rem;
+      }
+    }
+    @media screen and (min-width: 1920px) {
+      .title {
+        font-size: 10rem;
+      }
+
+      .subtitle {
+        font-size: 4rem;
+      }
+
+      .link-size {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</html>
