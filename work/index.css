@@ -362,6 +362,9 @@ li {
   max-height: 0rem;
 }
 
+.hidden {
+  display: none;
+}
 /* Job Accordion end */
 
 /* Goal text start */
