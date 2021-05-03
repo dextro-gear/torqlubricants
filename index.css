@@ -53,6 +53,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
 }
@@ -470,7 +471,7 @@ li {
 }
 /* Section-2 ends */
 
-/* Section-3 start */
+/* Reasons carousel start */
 .blue-title {
   font-size: 2rem;
   margin: 0;
@@ -479,7 +480,80 @@ li {
   letter-spacing: -0.05em;
   line-height: 163.5%;
 }
-/* Section-3 end */
+
+.swiper-container {
+  width: 100%;
+  padding: 0 var(--small-padding);
+  overflow-x: hidden;
+  margin-bottom: 3rem;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide {
+  filter: grayscale(100%);
+  user-select: none;
+}
+
+.swiper-slide-active {
+  filter: grayscale(0%);
+}
+
+.carousel {
+  margin: 5rem 0;
+}
+
+.carousel-flex {
+  padding: 0 var(--small-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.carousel-title {
+  font-size: 1.8rem;
+  font-variation-settings: "wght" 550;
+  letter-spacing: var(--letter-spacing-large);
+  margin: 0 0 1rem 0;
+}
+
+.carousel-desc {
+  font-size: 1.125rem;
+  font-variation-settings: "wght" 450;
+  letter-spacing: var(--letter-spacing-large);
+  line-height: var(--line-height-large);
+  margin: 0;
+}
+
+.carousel-text {
+  width: 50%;
+}
+
+.carousel-buttons {
+  user-select: none;
+}
+
+.carousel-buttons .iconify {
+  font-size: 3rem;
+  color: var(--primary-blue);
+  cursor: pointer;
+  user-select: none;
+}
+
+.carousel-buttons .iconify:focus,
+.carousel-buttons .iconify:active {
+  outline: none;
+}
+
+.carousel-buttons .iconify:first-child {
+  margin-right: 0.5rem;
+}
+/* Reasons carousel end */
 
 /* Industries start */
 .industries {
@@ -1193,6 +1267,11 @@ footer h4 {
     letter-spacing: -0.05em;
     line-height: 163.5%;
   }
+
+  .swiper-container,
+  .carousel-flex {
+    padding: 0 var(--medium-padding);
+  }
   /* 1366 RESPONSIVE Section-3 end */
 
   /* 1366 RESPONSIVE Industries start */
@@ -1901,6 +1980,24 @@ footer h4 {
     color: var(--primary-blue);
     letter-spacing: -0.05em;
     line-height: 163.5%;
+  }
+
+  .swiper-container,
+  .carousel-flex {
+    padding: 0 var(--large-padding);
+  }
+
+  .carousel-title {
+    font-size: 2.5rem;
+    font-variation-settings: "wght" 500;
+  }
+
+  .carousel-desc {
+    font-size: 1.45rem;
+  }
+
+  .carousel-buttons .iconify {
+    font-size: 4.5rem;
   }
   /* 1920 Section-3 end */
 

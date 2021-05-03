@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="/index.css" />
     <title>TORQ Speciality Lubricants - A Unit of Tribo Industries</title>
   </head>
@@ -493,6 +497,52 @@
       </div>
     </section>
     <!-- Section 2 - Trusted Clients and Grid end-->
+
+    <!-- Reasons carousel start -->
+    <section class="carousel">
+      <div class="title-block">
+        <p class="blue-title">Reasons our clients choose us</p>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/public/carousel/1.png" alt="1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/public/carousel/2.png" alt="2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/public/carousel/3.png" alt="3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/public/carousel/4.png" alt="4" />
+          </div>
+        </div>
+      </div>
+      <div class="carousel-flex">
+        <div class="carousel-text">
+          <p class="carousel-title">Technology that works</p>
+          <p class="carousel-desc">
+            Our state of the art manufacturing facility, R&D Centre and lab at
+            Hyderabad, India is capable of developing and producing the most
+            advanced technology lubrication oils & greases.
+          </p>
+        </div>
+        <div class="carousel-buttons">
+          <span
+            class="iconify prev-button"
+            data-icon="bi:arrow-left-circle"
+            data-inline="false"
+          ></span>
+          <span
+            class="iconify next-button"
+            data-icon="bi:arrow-right-circle"
+            data-inline="false"
+          ></span>
+        </div>
+      </div>
+    </section>
+    <!-- Reasons carousel end -->
 
     <!-- Industries grid start -->
     <section class="industries">
@@ -998,7 +1048,29 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+      const swiper = new Swiper(".swiper-container", {
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var prevButton = document.querySelector(".prev-button");
+      var nextButton = document.querySelector(".next-button");
+
+      prevButton.addEventListener("click", () => {
+        swiper.slidePrev(300);
+      });
+
+      nextButton.addEventListener("click", () => {
+        swiper.slideNext(300);
+      });
+
       var timeline = anime.timeline();
       var countUp25 = document.getElementById("counter25");
       var countUp100 = document.getElementById("counter100");
