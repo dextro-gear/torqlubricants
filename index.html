@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="/index.css" />
     <link rel="shortcut icon" href="/public/favicon.png" type="image/x-icon" />
     <title>TORQ Speciality Lubricants - A Unit of Tribo Industries</title>
-  </head>
-  <body>
     <script
       src="https://kit.fontawesome.com/79d4db592e.js"
       crossorigin="anonymous"
     ></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  </head>
+  <body>
     <!-- Navbar light start-->
     <nav class="navbar-light invisible">
       <ul class="nav-bar-flex">
@@ -530,16 +530,18 @@
           </p>
         </div>
         <div class="carousel-buttons">
-          <span
+          <button
             class="iconify prev-button"
             data-icon="bi:arrow-left-circle"
             data-inline="false"
-          ></span>
-          <span
+            onclick="scrollPrev()"
+          ></button>
+          <button
             class="iconify next-button"
             data-icon="bi:arrow-right-circle"
             data-inline="false"
-          ></span>
+            onclick="scrollNext()"
+          ></button>
         </div>
       </div>
     </section>
@@ -1043,155 +1045,165 @@
     </footer>
     <!-- Footer end -->
     <script src="http://unpkg.com/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".swiper-container", {
         loop: true,
         slidesPerView: 4,
         spaceBetween: 20,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
       });
 
-      var prevButton = document.querySelector(".prev-button");
-      var nextButton = document.querySelector(".next-button");
-
-      prevButton.addEventListener("click", () => {
+      function scrollPrev() {
         swiper.slidePrev(300);
-      });
+        console.log("prev button");
+      }
 
-      nextButton.addEventListener("click", () => {
+      function scrollNext() {
         swiper.slideNext(300);
+        console.log("next button");
+      }
+
+      $(window).ready(function () {
+        var prevButton = document.querySelector(".prev-button");
+        var nextButton = document.querySelector(".next-button");
+
+        $(prevButton).click(function () {
+          swiper.slidePrev(300);
+          console.log("prev button");
+        });
+
+        $(nextButton).click(function () {
+          swiper.slideNext(300);
+          console.log("next button");
+        });
+
+        var timeline = anime.timeline();
+        var countUp25 = document.getElementById("counter25");
+        var countUp100 = document.getElementById("counter100");
+        var countUp250 = document.getElementById("counter250");
+        var plusSpanArray = document.querySelectorAll(".plus");
+        var countTextArray = document.querySelectorAll(".count-text");
+
+        var reachCard = document.querySelector(".reach-card");
+        var hasAnimated = false;
+
+        var options = {
+          root: null,
+          threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+        };
+
+        var observer = new IntersectionObserver(function (entries, observer) {
+          entries.forEach((entry) => {
+            console.log(entry);
+
+            if (!entry.isIntersecting && entry.intersectionRatio <= 0.9) return;
+
+            if (!hasAnimated) {
+              timeline
+                .add({
+                  targets: countUp25,
+                  opacity: [0, 1],
+                  easing: "easeOutExpo",
+                  duration: "10ms",
+                  autoplay: true,
+                })
+                .add({
+                  targets: countUp25,
+                  innerText: [0, 25],
+                  easing: "easeOutExpo",
+                  round: 1,
+                  duration: "1000ms",
+                  autoplay: true,
+                })
+                .add({
+                  targets: plusSpanArray[0],
+                  opacity: [0, 1],
+                  easing: "linear",
+                  duration: "100ms",
+                  autoplay: true,
+                })
+                .add({
+                  targets: countTextArray[0],
+                  easing: "linear",
+                  opacity: [0, 1],
+                  duration: "500ms",
+                  delay: "10ms",
+                  autoplay: true,
+                })
+                .add({
+                  targets: countUp100,
+                  opacity: [0, 1],
+                  easing: "easeOutExpo",
+                  duration: "10ms",
+                  autoplay: true,
+                })
+                .add({
+                  targets: countUp100,
+                  innerText: [0, 100],
+                  easing: "easeOutExpo",
+                  round: 1,
+                  duration: "1000ms",
+                  autoplay: true,
+                })
+                .add({
+                  targets: plusSpanArray[1],
+                  opacity: [0, 1],
+                  easing: "linear",
+                  duration: "100ms",
+                  autoplay: true,
+                })
+                .add({
+                  targets: countTextArray[1],
+                  easing: "linear",
+                  opacity: [0, 1],
+                  duration: "500ms",
+                  delay: "10ms",
+                  autoplay: true,
+                })
+                .add({
+                  targets: countUp250,
+                  opacity: [0, 1],
+                  easing: "easeOutExpo",
+                  duration: "10ms",
+                  autoplay: true,
+                })
+                .add({
+                  targets: countUp250,
+                  innerText: [0, 250],
+                  easing: "easeOutExpo",
+                  round: 1,
+                  duration: "1000ms",
+                  autoplay: true,
+                })
+                .add({
+                  targets: plusSpanArray[2],
+                  opacity: [0, 1],
+                  easing: "linear",
+                  duration: "100ms",
+                  autoplay: true,
+                })
+                .add({
+                  targets: countTextArray[2],
+                  easing: "linear",
+                  opacity: [0, 1],
+                  duration: "500ms",
+                  delay: "10ms",
+                  autoplay: true,
+                });
+
+              hasAnimated = true;
+            }
+          }, options);
+        });
+
+        observer.observe(reachCard);
       });
-
-      var timeline = anime.timeline();
-      var countUp25 = document.getElementById("counter25");
-      var countUp100 = document.getElementById("counter100");
-      var countUp250 = document.getElementById("counter250");
-      var plusSpanArray = document.querySelectorAll(".plus");
-      var countTextArray = document.querySelectorAll(".count-text");
-
-      var reachCard = document.querySelector(".reach-card");
-      var hasAnimated = false;
-
-      var options = {
-        root: null,
-        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-      };
-
-      var observer = new IntersectionObserver(function (entries, observer) {
-        entries.forEach((entry) => {
-          console.log(entry);
-
-          if (!entry.isIntersecting && entry.intersectionRatio <= 0.9) return;
-
-          if (!hasAnimated) {
-            timeline
-              .add({
-                targets: countUp25,
-                opacity: [0, 1],
-                easing: "easeOutExpo",
-                duration: "10ms",
-                autoplay: true,
-              })
-              .add({
-                targets: countUp25,
-                innerText: [0, 25],
-                easing: "easeOutExpo",
-                round: 1,
-                duration: "1000ms",
-                autoplay: true,
-              })
-              .add({
-                targets: plusSpanArray[0],
-                opacity: [0, 1],
-                easing: "linear",
-                duration: "100ms",
-                autoplay: true,
-              })
-              .add({
-                targets: countTextArray[0],
-                easing: "linear",
-                opacity: [0, 1],
-                duration: "500ms",
-                delay: "10ms",
-                autoplay: true,
-              })
-              .add({
-                targets: countUp100,
-                opacity: [0, 1],
-                easing: "easeOutExpo",
-                duration: "10ms",
-                autoplay: true,
-              })
-              .add({
-                targets: countUp100,
-                innerText: [0, 100],
-                easing: "easeOutExpo",
-                round: 1,
-                duration: "1000ms",
-                autoplay: true,
-              })
-              .add({
-                targets: plusSpanArray[1],
-                opacity: [0, 1],
-                easing: "linear",
-                duration: "100ms",
-                autoplay: true,
-              })
-              .add({
-                targets: countTextArray[1],
-                easing: "linear",
-                opacity: [0, 1],
-                duration: "500ms",
-                delay: "10ms",
-                autoplay: true,
-              })
-              .add({
-                targets: countUp250,
-                opacity: [0, 1],
-                easing: "easeOutExpo",
-                duration: "10ms",
-                autoplay: true,
-              })
-              .add({
-                targets: countUp250,
-                innerText: [0, 250],
-                easing: "easeOutExpo",
-                round: 1,
-                duration: "1000ms",
-                autoplay: true,
-              })
-              .add({
-                targets: plusSpanArray[2],
-                opacity: [0, 1],
-                easing: "linear",
-                duration: "100ms",
-                autoplay: true,
-              })
-              .add({
-                targets: countTextArray[2],
-                easing: "linear",
-                opacity: [0, 1],
-                duration: "500ms",
-                delay: "10ms",
-                autoplay: true,
-              });
-
-            hasAnimated = true;
-          }
-        }, options);
-      });
-
-      observer.observe(reachCard);
     </script>
   </body>
 </html>
