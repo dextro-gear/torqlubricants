@@ -376,6 +376,10 @@ sub {
 .next-button {
   margin-left: 1.5rem;
 }
+
+.right-align {
+  text-align: right;
+}
 /* Buttons section end */
 
 /* Industries section start */
