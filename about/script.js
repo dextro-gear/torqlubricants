@@ -1,8 +1,6 @@
 var hero = document.querySelector(".hero");
-console.log(hero);
 
 var lightNavbar = document.querySelector(".navbar-light");
-console.log(lightNavbar);
 
 var options = {};
 var timeout;

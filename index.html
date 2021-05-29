@@ -404,7 +404,11 @@
         </p>
       </div>
       <a href="/buy/" class="contact-button">Contact</a>
-      <a href="#" class="whatsapp-button">
+      <a
+        href="https://api.whatsapp.com/send/?phone=919849139879&text=I+want+to+know+more+about+Torq+Lubricants&app_absent=0"
+        target="_blank"
+        class="whatsapp-button"
+      >
         <i class="fab fa-whatsapp"></i>Text on WhatsApp
       </a>
       <a href="#trusted">
@@ -521,12 +525,39 @@
         </div>
       </div>
       <div class="carousel-flex">
-        <div class="carousel-text">
+        <div class="carousel-text visible">
           <p class="carousel-title">Technology that works</p>
           <p class="carousel-desc">
             Our state of the art manufacturing facility, R&D Centre and lab at
             Hyderabad, India is capable of developing and producing the most
             advanced technology lubrication oils & greases.
+          </p>
+        </div>
+        <div class="carousel-text">
+          <p class="carousel-title">Assured Quality</p>
+          <p class="carousel-desc">
+            Stringent quality control measures by means of random testing of
+            samples by third parties from time to time to corroborate in-house
+            and third party results to ensure constant improvement in quality as
+            well as ensure unbiased opinions on the quality of the products.
+          </p>
+        </div>
+        <div class="carousel-text">
+          <p class="carousel-title">Technical Prowess & Innovation</p>
+          <p class="carousel-desc">
+            Experience and expertise in manufacturing automotive, industrial and
+            specialty lubricants including lubricating greases, oils and pastes.
+            Capacity to develop tailor-made products based on client's needs and
+            requirements.
+          </p>
+        </div>
+        <div class="carousel-text">
+          <p class="carousel-title">Ease of Doing Business</p>
+          <p class="carousel-desc">
+            Capability to provide technical consultancy and professional
+            lubricant advice to clients.Availability of all major transports in
+            the vicinity to ensure on time door step delivery in every part of
+            the country.
           </p>
         </div>
         <div class="carousel-buttons">
@@ -556,12 +587,12 @@
         </p>
       </div>
       <div class="industries-grid">
-        <a href="#" class="grid-unit" id="img1">
+        <a href="/industries/iron/" class="grid-unit" id="img1">
           <div class="grid-img-text">
             <p>Iron and Steel</p>
           </div>
         </a>
-        <a href="#" class="grid-unit" id="img2">
+        <a href="/industries/wind/" class="grid-unit" id="img2">
           <div class="grid-img-text">
             <p>Wind Power</p>
           </div>
@@ -576,7 +607,7 @@
             <p>Infrastructure</p>
           </div>
         </a>
-        <a href="#" class="grid-unit" id="img5">
+        <a href="/industries/paper/" class="grid-unit" id="img5">
           <div class="grid-img-text">
             <p>Paper</p>
           </div>
@@ -591,12 +622,12 @@
             <p>General Electronics</p>
           </div>
         </a>
-        <a href="#" class="grid-unit" id="img8">
+        <a href="/industries/cement/" class="grid-unit" id="img8">
           <div class="grid-img-text">
             <p>Cement</p>
           </div>
         </a>
-        <a href="#" class="grid-unit" id="img9">
+        <a href="/industries/mining/" class="grid-unit" id="img9">
           <div class="grid-img-text">
             <p>Mining</p>
           </div>
@@ -606,12 +637,12 @@
             <p>Automobile</p>
           </div>
         </a>
-        <a href="#" class="grid-unit" id="img11">
+        <a href="/industries/power/" class="grid-unit" id="img11">
           <div class="grid-img-text">
             <p>Power</p>
           </div>
         </a>
-        <a href="#" class="grid-unit" id="img12">
+        <a href="/industries/marine/" class="grid-unit" id="img12">
           <div class="grid-img-text">
             <p>Marine</p>
           </div>
@@ -621,7 +652,7 @@
             <p>Chemicals</p>
           </div>
         </a>
-        <a href="#" class="grid-unit" id="img14">
+        <a href="/industries/sugar/" class="grid-unit" id="img14">
           <div class="grid-img-text">
             <p>Sugar</p>
           </div>
@@ -631,7 +662,7 @@
             <p>Minerals</p>
           </div>
         </a>
-        <a href="#" class="grid-unit" id="img16">
+        <a href="/industries/textile/" class="grid-unit" id="img16">
           <div class="grid-img-text">
             <p>Textile</p>
           </div>
@@ -1053,6 +1084,10 @@
     ></script>
     <script src="script.js"></script>
     <script>
+      var textArray = document.querySelectorAll(".carousel-text");
+      var index = 0;
+      var n = textArray.length;
+
       const swiper = new Swiper(".swiper-container", {
         loop: true,
         slidesPerView: 4,
@@ -1061,28 +1096,22 @@
 
       function scrollPrev() {
         swiper.slidePrev(300);
-        console.log("prev button");
+        scrollText(-1);
       }
 
       function scrollNext() {
         swiper.slideNext(300);
-        console.log("next button");
+        scrollText(1);
+      }
+
+      function scrollText(move) {
+        console.log(index);
+        textArray[index].classList.toggle("visible");
+        textArray[(((index + move) % n) + n) % n].classList.toggle("visible");
+        index = (((index + move) % n) + n) % n;
       }
 
       $(window).ready(function () {
-        var prevButton = document.querySelector(".prev-button");
-        var nextButton = document.querySelector(".next-button");
-
-        $(prevButton).click(function () {
-          swiper.slidePrev(300);
-          console.log("prev button");
-        });
-
-        $(nextButton).click(function () {
-          swiper.slideNext(300);
-          console.log("next button");
-        });
-
         var timeline = anime.timeline();
         var countUp25 = document.getElementById("counter25");
         var countUp100 = document.getElementById("counter100");
@@ -1100,8 +1129,6 @@
 
         var observer = new IntersectionObserver(function (entries, observer) {
           entries.forEach((entry) => {
-            console.log(entry);
-
             if (!entry.isIntersecting && entry.intersectionRatio <= 0.9) return;
 
             if (!hasAnimated) {
