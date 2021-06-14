@@ -58,6 +58,11 @@ body {
   padding: 0;
 }
 
+.gsc-control-cse {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
 .left-padding {
   padding-left: 10rem;
 }
@@ -247,7 +252,7 @@ li {
 
 .search-box {
   display: inline-block;
-  margin-left: 5rem;
+  margin-left: 1rem;
 }
 
 .search-box .iconify {
@@ -1784,7 +1789,6 @@ footer h4 {
 
   .search-box {
     display: inline-block;
-    margin-left: 10rem;
   }
 
   .search-box p {

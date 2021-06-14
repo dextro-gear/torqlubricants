@@ -69,6 +69,11 @@ body {
   background-color: var(--secondary-orange);
 }
 
+.gsc-control-cse {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
 /* Hero start */
 .hero {
   position: relative;
@@ -247,7 +252,7 @@ li {
 .search-box {
   display: flex;
   align-items: center;
-  margin-left: 5rem;
+  margin-left: 1rem;
 }
 
 .search-box .iconify {

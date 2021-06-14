@@ -307,8 +307,18 @@ li {
   margin-bottom: 3rem;
 }
 
+.no-job {
+  font-size: 2rem;
+  text-align: center;
+  font-variation-settings: "wght" 550;
+  letter-spacing: var(--letter-spacing-large);
+}
+
 .accordion {
   width: 30rem;
+  letter-spacing: var(--letter-spacing-large);
+  text-align: center;
+  vertical-align: center;
 }
 
 .accordion-item {

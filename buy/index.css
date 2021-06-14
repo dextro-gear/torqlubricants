@@ -246,7 +246,6 @@ li {
 .search-box {
   display: flex;
   align-items: center;
-  margin-left: 5rem;
 }
 
 .search-box .iconify {
