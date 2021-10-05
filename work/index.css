@@ -317,7 +317,7 @@ li {
 .accordion {
   width: 30rem;
   letter-spacing: var(--letter-spacing-large);
-  text-align: center;
+  /* text-align: center; */
   vertical-align: center;
 }
 
